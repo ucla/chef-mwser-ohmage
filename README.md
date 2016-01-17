@@ -1,41 +1,21 @@
 # ectg-ohmage-cookbook
 
-TODO: Enter the cookbook description here.
+"wrapper" cookbook for ohmage. Preps a box to have ohmage deployed (not added by this cookbook!)
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
-
-## Attributes
-
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['ectg-ohmage']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+Ubuntu 12.04, Ubuntu 14.04
 
 ## Usage
 
-### ectg-ohmage::default
+Adding `ectg-ohmage` to your node's run list will result in a few things happening:
 
-Include `ectg-ohmage` in your node's `run_list`:
+  * tomcat7/java/mysql/nginx will all be installed and configured
+  * an `ohmage` db and user will be created
+  * necessary ohmage fs locations will be created and `chown`ed for tomcat (`/var/lib/ohmage` and `/var/log/ohmage`)
+  * flyway installed at `/opt/flyway-ohmage/` (most just a convenience measure for using flyway while managing ohmage)
 
-```json
-{
-  "run_list": [
-    "recipe[ectg-ohmage::default]"
-  ]
-}
-```
+You'll need to have chef-vault databags for `passwords/db_root`, `passwords/ohmage` `ssl/#{fqdn_of_node}`.
 
 ## License and Authors
 
