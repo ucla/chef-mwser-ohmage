@@ -1,0 +1,13 @@
+name 'ectg-ohmage'
+maintainer 'Steve Nolen'
+maintainer_email 'technolengy@gmail.com'
+license 'Apache 2.0'
+description 'Installs/Configures ectg-ohmage'
+long_description 'Installs/Configures ectg-ohmage'
+version '0.2.0'
+
+depends 'mysql'
+depends 'nginx'
+depends 'mysql2_chef_gem'
+depends 'database'
+depends 'flyway'
