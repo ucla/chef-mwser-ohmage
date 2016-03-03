@@ -1,9 +1,9 @@
-name 'ectg-ohmage'
+name 'mwser-ohmage'
 maintainer 'Steve Nolen'
 maintainer_email 'technolengy@gmail.com'
 license 'Apache 2.0'
-description 'Installs/Configures ectg-ohmage'
-long_description 'Installs/Configures ectg-ohmage'
+description 'Installs/Configures mwser-ohmage'
+long_description 'Installs/Configures mwser-ohmage'
 version '0.2.0'
 
 depends 'mysql'

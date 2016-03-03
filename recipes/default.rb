@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: ectg-ohmage
+# Cookbook Name:: mwser-ohmage
 # Recipe:: default
 #
 # Copyright (C) 2016 UC Regents

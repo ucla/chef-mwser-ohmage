@@ -1,3 +1,3 @@
 # 0.1.0
 
-Initial release of ectg-ohmage
+Initial release of mwser-ohmage
