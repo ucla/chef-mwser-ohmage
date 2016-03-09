@@ -131,7 +131,8 @@ template '/etc/nginx/sites-available/ohmage' do
   action :create
   variables(
     ssl_name: fqdn,
-    ocpu: 'ocpu.ohmage.org'
+    ocpu: 'ocpu.ohmage.org',
+    read_only: false
   )
   notifies :reload, 'service[nginx]', :delayed
 end

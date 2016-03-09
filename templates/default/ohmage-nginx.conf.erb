@@ -17,7 +17,7 @@ server {
   client_max_body_size 1000m;
   expires 7d;
 
-<% if node['ohmage']['read-only'] %>
+<% if @read_only %>
   include includes/ro-ohmage;
 <% end %>
 
