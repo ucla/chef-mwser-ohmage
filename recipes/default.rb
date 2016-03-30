@@ -88,7 +88,8 @@ flyway 'ohmage' do
   password db_ohmage
   additional_options(
     'placeholders.fqdn' => fqdn,
-    'placeholders.base_dir' => '/var/lib/ohmage'
+    'placeholders.base_dir' => '/var/lib/ohmage',
+    'flyway.locations' => 'filesystem:/opt/ohmage-source/db/migration/'
   )
   action :create
 end
