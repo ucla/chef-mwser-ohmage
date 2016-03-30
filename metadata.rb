@@ -4,7 +4,7 @@ maintainer_email 'technolengy@gmail.com'
 license 'Apache 2.0'
 description 'Installs/Configures mwser-ohmage'
 long_description 'Installs/Configures mwser-ohmage'
-version '0.2.2'
+version '0.2.3'
 
 depends 'mysql'
 depends 'nginx'

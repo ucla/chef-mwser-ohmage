@@ -89,7 +89,7 @@ flyway 'ohmage' do
   additional_options(
     'placeholders.fqdn' => fqdn,
     'placeholders.base_dir' => '/var/lib/ohmage',
-    'flyway.locations' => 'filesystem:/opt/ohmage-source/db/migration/'
+    'locations' => 'filesystem:/opt/ohmage-source/db/migration/'
   )
   action :create
 end
