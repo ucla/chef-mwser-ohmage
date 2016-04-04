@@ -81,6 +81,20 @@ template '/etc/ohmage.conf' do
   action :create
 end
 
+template '/etc/default/tomcat7' do
+  source 'tomcat7_default.conf.erb'
+  mode '0755'
+  action :create
+end
+
+template '/etc/default/tomcat7' do
+  source 'tomcat7_setenv.sh.erb'
+  mode '0775'
+  user 'tomcat7'
+  group 'tomcat7'
+  action :create
+end
+
 # install flyway, configure conf file for ohmage
 flyway 'ohmage' do
   url 'jdbc:mysql://127.0.0.1:3306/ohmage'
