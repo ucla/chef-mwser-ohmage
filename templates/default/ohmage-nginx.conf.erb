@@ -1,9 +1,6 @@
 upstream ohmage {
   server 127.0.0.1:8080 fail_timeout=10s;
 }
-upstream ocpu {
-  server <%= @ocpu -%> fail_timeout=10s;
-}
 
 ##LISTEN ON HTTPS##
 server {
@@ -50,19 +47,6 @@ server {
   location ~ /\.git {
           deny all;
   }
-
-  location /ocpu {
-    proxy_pass http://ocpu/ocpu;
-  }
-
-  location /navbar/plotapp {
-    proxy_pass http://ocpu/ocpu/library/plotbuilder/www;
-  }
-
-  location /webapps/plotapp {
-    proxy_pass http://ocpu/ocpu/library/plotbuilder/www;
-  }
-
 }
 
 #REDIRECT ALL HTTP REQUESTS TO HTTPS##
